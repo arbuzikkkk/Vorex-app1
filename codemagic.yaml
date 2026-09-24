@@ -5,6 +5,8 @@ workflows:
     environment:
       flutter: stable
     scripts:
+      - name: Create platform files
+        script: flutter create --platforms=android .
       - name: Get Flutter packages
         script: flutter pub get
       - name: Build APK (debug — no signing needed to test on your phone)
